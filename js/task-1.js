@@ -18,6 +18,13 @@ Tüm slug kelimeler bir tire ile ayrılmalıdır.
 Aşağıdaki kodu alın ve doğru çalışıp çalışmadığını kontrol etmek için fonksiyonunuzun tanımlanmasından sonra yapıştırın. Konsol, sonuçları gösterecektir.
 */
 
+function slugify(title) {
+  return title
+    .toLowerCase() // Convert to lowercase
+    .split(" ") // Split by spaces
+    .join("-"); // Join with hyphens
+}
+
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"

@@ -13,6 +13,16 @@ Sonuç olarak eşleşen sayıları içeren yeni dizinizi döndürün.
 Aşağıdaki kodu alın ve doğru çalışıp çalışmadığını kontrol etmek için fonksiyonunuzun bildiriminden sonra yapıştırın. Konsol, çalışmanın sonuçlarını gösterecektir.
 */
 
+function filterArray(numbers, value) {
+  const result = [];
+  for (const number of numbers) {
+    if (number > value) {
+      result.push(number);
+    }
+  }
+  return result;
+}
+
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
 console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
 console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
